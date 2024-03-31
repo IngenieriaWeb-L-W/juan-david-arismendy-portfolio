@@ -1,113 +1,146 @@
 import Image from "next/image";
+import { Button, Menu } from "@/components/atoms/buttons";
+import { Title_1, Name, RegularText, KeyValueExpandedRow } from "@/components/atoms/text";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
+
+    <div className="flex gap-5 justify-between bg-gray-100 max-md:flex-wrap">
+      {/* Left Column */}
+      <div className="flex flex-col pb-20 bg-white">
+        <div className="flex flex-col px-10 pt-12 pb-20 w-full max-md:px-5 max-sm:hidden">
+          <div className="flex overflow-hidden relative flex-col items-end self-center px-16 pt-20 pb-5 max-w-full rounded-full aspect-square w-[300px]">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src={'/foto.jpg'}
+              alt={"Foto perfil LauraT"}
+              width={300}
+              height={300}
             />
-          </a>
+            <div className="relative shrink-0 mt-9 w-full h-4 bg-lime-500 rounded-full" />
+          </div>
+          <div className="self-center mt-9 text-lg font-medium leading-6 capitalize text-zinc-800">
+            Juan David Arismendy
+          </div>
+          <div className="self-center mt-5 text-base leading-6 capitalize text-neutral-500">
+            Font-end Developer
+          </div>
+          <div className="shrink-0 mt-16 h-px bg-gray-100 border-2 border-gray-100 border-solid max-md:mt-10" />
+          <div className="flex flex-col py-1.5 pl-1.5 mt-6 text-base leading-6 capitalize whitespace-nowrap">
+            <div className="flex gap-5 justify-between px-px text-zinc-800 flex-col">
+              <KeyValueExpandedRow title="Age" value="35" ></KeyValueExpandedRow>
+              <KeyValueExpandedRow title="Residence" value="BD" ></KeyValueExpandedRow>
+              <KeyValueExpandedRow title="Freelance" value="Available" ></KeyValueExpandedRow>
+              <KeyValueExpandedRow title="Address" value="Dhaka,Bangladesh" ></KeyValueExpandedRow>
+            </div>
+
+          </div>
+          <div className="shrink-0 mt-6 h-px bg-gray-100 border-2 border-gray-100 border-solid" />
+
+
+          <div className="shrink-0 mt-6 h-px bg-gray-100 border-2 border-gray-100 border-solid" />
+
+
+          <div className="shrink-0 mt-6 h-px bg-gray-100 border-2 border-gray-100 border-solid" />
+
+
         </div>
       </div>
+      {/* Middle Column */}
+      <div className="flex flex-col px-14 max-md:max-w-full max-sm:hidden pt-2 bg-white">
+        <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+          <div className="flex flex-col w-[61%] max-md:ml-0 max-md:w-full">
+            <div className="flex flex-col self-stretch my-auto text-base max-md:mt-10 max-md:max-w-full">
+              <Name></Name>
+              <RegularText></RegularText>
+              <br />
+              <Button text="HIRE ME ->" />
+            </div>
+          </div>
+          <div className="flex flex-col ml-5 w-[39%] max-md:ml-0 max-md:w-full">
+            <Image
+              src={'/foto.jpg'}
+              alt={"Foto perfil LauraT"}
+              width={300}
+              height={300}
+            />
+          </div>
+        </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
       </div>
+      {/* Right Column */}
+      <div className="flex flex-col px-6 pt-20 pb-20 bg-white max-md:hidden max-md:px-5">
+        <div className="text-lg font-bold leading-6 capitalize text-zinc-800">
+          Links
+        </div>
+        <div className="flex flex-col justify-center items-center mt-5">
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        </div>
       </div>
-    </main>
+    </div>
   );
 }
+
+
+
+
+
+
+
+
+// <div className='bg-white h-screen flex justify-center items-center'>
+//   <Menu />
+//   <Button text="HIRE ME ->" />
+
+//   <Title_1 title="HIRE ME ->" />
+//   <Name />
+// </div>
+
+// import * as React from "react";
+
+// function MyComponent() {
+//   return (
+//     <div className="px-14 pt-2 bg-white max-w-[970px] max-md:px-5">
+//       <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+//         <div className="flex flex-col w-[61%] max-md:ml-0 max-md:w-full">
+//           <div className="flex flex-col self-stretch my-auto text-base max-md:mt-10 max-md:max-w-full">
+//             <div className="text-5xl font-bold text-yellow-500 leading-[59px] max-md:max-w-full max-md:text-4xl max-md:leading-[55px]">
+//               <span className="text-zinc-800">I’m Rayan Adlrdard</span>
+//               <br />
+//               <span className="text-yellow-500">Front-end</span>
+//               <span className="text-zinc-800"> D</span>
+//               <span className="text-zinc-800">eveloper </span>
+//             </div>
+//             <div className="mt-7 leading-6 capitalize text-neutral-500 max-md:max-w-full">
+//               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
+//               volutpat feugiat placerat lobortis. Natoque rutrum semper sed
+//               suspendisse nunc lectus.
+//             </div>
+//             <div className="flex flex-col justify-center mt-11 max-w-full font-medium text-center text-zinc-800 w-[154px] max-md:mt-10">
+//               <div className="flex flex-col justify-center">
+//                 <div className="flex flex-col justify-center px-8 py-4 w-full bg-yellow-500 rounded-md max-md:px-5">
+//                   <div className="flex gap-2.5 px-px py-0.5">
+//                     <div className="my-auto">HIRE ME</div>
+//                     <img
+//                       loading="lazy"
+//                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/fb733e9b7baeaf0be9cf39f35a8a0f0442b4213b42501bbc814c5bafc6137360?apiKey=16c5b9866e1241e69e5115f796372ea1&"
+//                       className="shrink-0 w-4 aspect-square"
+//                     />
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//         <div className="flex flex-col ml-5 w-[39%] max-md:ml-0 max-md:w-full">
+//           <img
+//             loading="lazy"
+//             srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/39ed380cca87ce6a35aa55836d693b02f624bc0de762624f403ec494f8f7932b?apiKey=16c5b9866e1241e69e5115f796372ea1&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/39ed380cca87ce6a35aa55836d693b02f624bc0de762624f403ec494f8f7932b?apiKey=16c5b9866e1241e69e5115f796372ea1&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/39ed380cca87ce6a35aa55836d693b02f624bc0de762624f403ec494f8f7932b?apiKey=16c5b9866e1241e69e5115f796372ea1&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/39ed380cca87ce6a35aa55836d693b02f624bc0de762624f403ec494f8f7932b?apiKey=16c5b9866e1241e69e5115f796372ea1&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/39ed380cca87ce6a35aa55836d693b02f624bc0de762624f403ec494f8f7932b?apiKey=16c5b9866e1241e69e5115f796372ea1&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/39ed380cca87ce6a35aa55836d693b02f624bc0de762624f403ec494f8f7932b?apiKey=16c5b9866e1241e69e5115f796372ea1&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/39ed380cca87ce6a35aa55836d693b02f624bc0de762624f403ec494f8f7932b?apiKey=16c5b9866e1241e69e5115f796372ea1&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/39ed380cca87ce6a35aa55836d693b02f624bc0de762624f403ec494f8f7932b?apiKey=16c5b9866e1241e69e5115f796372ea1&"
+//             className="grow w-full aspect-[0.71] max-md:mt-10"
+//           />
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+

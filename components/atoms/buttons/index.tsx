@@ -1,7 +1,26 @@
-export function Button() {
-    return <button
-        className='color_gradient w-[163px] h-11 rounded-full text-white font-bold shadow'>
-        Request Invite</button>;
+
+interface ButtonProps {
+    text: string;
+    color?: string;
+}
+
+export function Button({ text, color = 'bg-primary' }: ButtonProps) {
+    return (
+        <button
+            className={`
+        ${color}
+        px-4 py-2 rounded-md text-secondary font-normal text-center 
+      `}
+        >
+            {text}
+        </button>
+    );
+};
+
+export function YellowButton({ text }: ButtonProps) {
+    return (
+        Button({ text: text })
+    );
 }
 
 export function Menu() {
@@ -11,3 +30,11 @@ export function Menu() {
     </button>;
 
 }
+
+
+
+
+
+
+
+
