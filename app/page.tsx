@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button, Menu } from "@/components/atoms/buttons";
 import { Title_1, Name, RegularText, KeyValueExpandedRow } from "@/components/atoms/text";
+import { ProgressBar, TextWithIcon, ProfilePictureWithLabel } from "@/components/molecules/widgets";
 
 export default function Home() {
   return (
@@ -9,10 +10,11 @@ export default function Home() {
       {/* Left Column */}
       <div className="flex flex-col pb-20 bg-white">
         <div className="flex flex-col px-10 pt-12 pb-20 w-full max-md:px-5 max-sm:hidden">
-          <div className="flex overflow-hidden relative flex-col items-end self-center px-16 pt-20 pb-5 max-w-full rounded-full aspect-square w-[300px]">
+        <ProfilePictureWithLabel/>
+          {/* <div className="flex overflow-hidden relative flex-col items-end self-center px-16 pt-20 pb-5 max-w-full rounded-full aspect-square w-[300px]">
             <Image
               src={'/foto.jpg'}
-              alt={"Foto perfil LauraT"}
+              alt={"Foto perfil"}
               width={300}
               height={300}
             />
@@ -23,25 +25,51 @@ export default function Home() {
           </div>
           <div className="self-center mt-5 text-base leading-6 capitalize text-neutral-500">
             Font-end Developer
-          </div>
+          </div> */}
           <div className="shrink-0 mt-16 h-px bg-gray-100 border-2 border-gray-100 border-solid max-md:mt-10" />
           <div className="flex flex-col py-1.5 pl-1.5 mt-6 text-base leading-6 capitalize whitespace-nowrap">
             <div className="flex gap-5 justify-between px-px text-zinc-800 flex-col">
               <KeyValueExpandedRow title="Age" value="35" ></KeyValueExpandedRow>
-              <KeyValueExpandedRow title="Residence" value="BD" ></KeyValueExpandedRow>
               <KeyValueExpandedRow title="Freelance" value="Available" ></KeyValueExpandedRow>
-              <KeyValueExpandedRow title="Address" value="Dhaka,Bangladesh" ></KeyValueExpandedRow>
+              <KeyValueExpandedRow title="City" value="Medellín, COL" ></KeyValueExpandedRow>
             </div>
 
           </div>
           <div className="shrink-0 mt-6 h-px bg-gray-100 border-2 border-gray-100 border-solid" />
+          <div className="flex flex-col mt-6 text-lg font-bold leading-6 capitalize text-zinc-800" />
 
+          <div className="w-full text-lg font-medium leading-6 capitalize text-zinc-800">
+            Languages
+          </div>
+          <ProgressBar text="English" percentage={80} />
+          <ProgressBar text="Spanish" percentage={100} />
 
           <div className="shrink-0 mt-6 h-px bg-gray-100 border-2 border-gray-100 border-solid" />
 
+          <div className="w-full text-lg font-medium leading-6 capitalize text-zinc-800">
+            <div className="flex flex-col mt-6 text-lg font-bold leading-6 capitalize text-zinc-800" />
+
+            Programming Languages
+          </div>
+          <ProgressBar text="Flutter" percentage={100} />
+          <ProgressBar text="HTML" percentage={80} />
+          <ProgressBar text="CSS" percentage={100} />
+          <ProgressBar text="Flutter" percentage={100} />
+          <ProgressBar text="HTML" percentage={80} />
+          <ProgressBar text="CSS" percentage={100} />
 
           <div className="shrink-0 mt-6 h-px bg-gray-100 border-2 border-gray-100 border-solid" />
 
+          <div className="w-full text-lg font-medium leading-6 capitalize text-zinc-800">
+            <div className="flex flex-col mt-6 text-lg font-bold leading-6 capitalize text-zinc-800" />
+            Extra Skills
+            <div className="flex gap-4 mt-6">
+
+              <TextWithIcon />
+            </div>
+          </div>
+
+          <div className="shrink-0 mt-6 h-px bg-gray-100 border-2 border-gray-100 border-solid" />
 
         </div>
       </div>
@@ -59,10 +87,67 @@ export default function Home() {
           <div className="flex flex-col ml-5 w-[39%] max-md:ml-0 max-md:w-full">
             <Image
               src={'/foto.jpg'}
-              alt={"Foto perfil LauraT"}
+              alt={"Foto perfil "}
               width={300}
               height={300}
             />
+          </div>
+
+        </div>
+        <div className="self-center mt-12 text-3xl font-bold leading-10 capitalize text-zinc-800 max-md:mt-10">
+          my Knowledge
+        </div>
+        <div className="self-center mt-8 text-base leading-6 text-center capitalize text-neutral-500 max-md:max-w-full">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          sint. Velit officia consequat duis enim velit mollit. lorem ipsum
+        </div>
+        <div className="mt-12 max-md:mt-10 max-md:max-w-full">
+          <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+            <div className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
+              <div className="flex flex-col grow px-20 pt-7 pb-12 w-full capitalize bg-white max-md:px-5 max-md:mt-5">
+                <img
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/1e23b15b1fd42e27222f47056300736252f1f1e8d1d9a6d528474ceb77d1390d?apiKey=16c5b9866e1241e69e5115f796372ea1&"
+                  className="self-center aspect-square w-[68px]"
+                />
+                <div className="mt-8 text-lg font-medium leading-6 text-zinc-800">
+                  web development
+                </div>
+                <div className="mt-5 text-base leading-6 text-center text-neutral-500">
+                  blog, e-commerce
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+              <div className="flex flex-col grow items-center px-14 pt-7 pb-12 w-full capitalize bg-white max-md:px-5 max-md:mt-5">
+                <img
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e4c3fbda4662e8737e31887b087bc65c964264cad8dbcbab795a4cf87c0dfa0?apiKey=16c5b9866e1241e69e5115f796372ea1&"
+                  className="aspect-square w-[68px]"
+                />
+                <div className="mt-8 text-lg font-medium leading-6 text-zinc-800">
+                  uI/uX design
+                </div>
+                <div className="self-stretch mt-5 text-base leading-6 text-center text-neutral-500">
+                  Mobile app, website design
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+              <div className="flex flex-col grow items-center px-16 pt-6 pb-12 w-full capitalize bg-white max-md:px-5 max-md:mt-5">
+                <img
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/a41daf0721c471b6e1950a34a17a69837ebaecb723755c23a9124044e32c2a03?apiKey=16c5b9866e1241e69e5115f796372ea1&"
+                  className="aspect-square w-[74px]"
+                />
+                <div className="mt-7 text-lg font-medium leading-6 text-zinc-800">
+                  sound design
+                </div>
+                <div className="self-stretch mt-5 text-base leading-6 text-center text-neutral-500">
+                  Voice Over, Beat Making
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

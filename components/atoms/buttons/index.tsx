@@ -15,7 +15,7 @@ export function Button({ text, color = 'bg-primary' }: ButtonProps) {
             {text}
         </button>
     );
-};
+}
 
 export function YellowButton({ text }: ButtonProps) {
     return (
