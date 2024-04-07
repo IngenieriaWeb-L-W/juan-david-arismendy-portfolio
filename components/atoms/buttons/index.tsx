@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 
 interface ButtonProps {
     text: string;
@@ -31,11 +33,14 @@ export function Menu() {
 
 }
 
-export function IconButton({ icon }: { icon: string }) {
+export function IconButton({ icon, link }: { icon: string, link: string }) {
     return (
-        <button className='text-secondary'>
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="currentColor" d={icon} /></svg>
-        </button>
+        <Link href={link}>
+            <button className='text-secondary ' >
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="currentColor" d={icon} /></svg>
+
+            </button>
+        </Link>
     );
 }
 
