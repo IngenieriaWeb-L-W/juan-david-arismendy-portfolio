@@ -8,14 +8,19 @@ interface ButtonProps {
 
 export function Button({ text, color = 'bg-primary' }: ButtonProps) {
     return (
-        <button
-            className={`
+
+        <Link href="?modal=true">
+            <button
+                className={`
         ${color}
         px-4 py-2 rounded-md text-secondary font-normal text-center 
       `}
-        >
-            {text}
-        </button>
+            >
+                {text}
+            </button>
+        </Link>
+
+
     );
 }
 

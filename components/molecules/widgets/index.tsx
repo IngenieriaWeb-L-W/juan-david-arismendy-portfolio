@@ -1,5 +1,11 @@
+"use client";
 import Image from "next/image";
 import React from 'react';
+
+import { useSearchParams, usePathname } from "next/navigation";
+import Link from "next/link";
+import ReactDOM from "react-dom";
+
 
 
 interface ProgressProps {
@@ -177,5 +183,35 @@ export function Footer() {
                 </div>
             </div>
         </div>
+    );
+}
+
+
+
+export function Modal() {
+    const searchParams = useSearchParams();
+    const modal = searchParams.get("modal");
+    const pathname = usePathname();
+
+    return (
+        <>
+            {modal &&
+                <dialog
+                    className="fixed left-0 top-0 w-full h-full bg-black bg-opacity-50 z-50 overflow-auto backdrop-blur flex justify-center items-center">
+                    <div className="bg-white m-auto p-8">
+                        <div className="flex flex-col items-center">
+                            <p>Do you want further info? , Let's talk on </p>
+                            <a className="text-primary" href="https://www.linkedin.com/in/juanarismendy16/" target="linkedIn" > linkedIn </a>
+                            <p>Or send me an </p>
+                            <a className="text-primary" href="mailto:juan.arismendy@udea.edu.co">Email</a>
+                            <br />
+                            <Link href={pathname}>
+                                <button type="button" className="bg-primary text-white p-2">Maybe later</button>
+                            </Link>
+                        </div>
+                    </div>
+                </dialog>
+            }
+        </>
     );
 }
