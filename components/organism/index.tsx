@@ -77,7 +77,7 @@ export function MainContent() {
                         <br />
                         <RegularText></RegularText>
                         <br />
-                        <Button text="HIRE ME ->" />
+                        <Button text="Contact Me ->" />
                     </div>
                 </div>
                 <div className="flex flex-col ml-5 w-[39%] max-md:ml-0 max-md:w-full">
