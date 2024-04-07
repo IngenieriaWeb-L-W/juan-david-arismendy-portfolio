@@ -19,8 +19,10 @@ export function Name() {
 
 export function RegularText() {
     return (
-        <div className="text-base leading-6 capitalize max-w-[394px] text-tertiary">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpa
+        <div className="text-base leading-6 capitalize max-w-[100%] text-tertiary">
+            +10 years of experience in programming (Dart - Flutter , Python - Django , NodeJs, C++), electronic circuit design, microcontrollers, design and development of automation systems, customized equipment, and academic research on it. Spanish - English
+            I’m interested about improve my skills as a Flutter Developer
+            Robotics passionate.
         </div>
     );
 }
