@@ -1,34 +1,35 @@
-## Project Name: Juan David Arismendy Profile - CV Website
+# Juan David Arismendy Profile - CV Website
 
-# Description:
+## Description:
 
 This is a personal CV website built using Next.js, React, and Tailwind CSS. It showcases my skills and experience in a professional and visually appealing way.
 
 
-#Live Demo:
+## Live Demo:
 
 Public URL: https://juan-david-arismendy.vercel.app/
 
-# Getting Started (for Developers):
+## Getting Started (for Developers):
 
 Prerequisites:
 
 Node.js and npm installed on your system. You can download them from the official website: https://nodejs.org/en
 
-# 1.Clone the Repository:
+## 1.Clone the Repository:
 
 Bash
 ```bash
 git clone https://github.com/IngenieriaWeb-L-W/juan-david-arismendy-portfolio.git
+```
 
-# 2.Install Dependencies:
+## 2.Install Dependencies:
 
 Bash
 ```bash
 cd cv-website-ddirectory
 npm install
 ```
-# 3. Development Server:
+## 3. Development Server:
 
 Dev mode:
 
@@ -47,23 +48,6 @@ npm run build
 ```
 
 This will create an optimized production build in the `.next` directory. You can then deploy this folder to a hosting platform.
-
-
-
-
-
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
 
 # Learn More
