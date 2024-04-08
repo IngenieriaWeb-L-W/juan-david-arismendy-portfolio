@@ -56,7 +56,7 @@ export function ProfilePictureWithLabel() {
         <div className="flex flex-col items-center w-37 ">
             <div className="flex overflow-hidden relative flex-col items-center w-37 rounded-full aspect-square bg-grey ">
                 <Image
-                    src={'/foto.jpg'}
+                    src={"/profile_picture.svg"}
                     alt={"Foto perfil"}
                     width={200}
                     height={200}

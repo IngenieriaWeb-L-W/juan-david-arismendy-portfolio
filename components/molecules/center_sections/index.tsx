@@ -17,7 +17,7 @@ export function SummarySection() {
             </div>
             <div className="flex flex-col ml-5 w-[39%] max-md:ml-0 max-md:w-full">
                 <Image
-                    src={'/foto.jpg'}
+                    src={'/profile_picture.svg'}
                     alt={"Foto perfil "}
                     width={300}
                     height={300}
